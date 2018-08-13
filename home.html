@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCC Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- import Bootstrap CDN: CSS, JS, Popper.js and jQuary-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- import Bootstrap end --> 
+    <style>
+    #shortCutButton{height:120px; width:120px; border-radius: 0%; margin-bottom: 5px}
+    </style>
+    <script>
+        function startMonitorApps(){
+            window.open("https://itsomi.tools.cihs.gov.on.ca/topaz/login.jsp?openInNewWindow=false&if_redirect=true&portlet_url=%2Fopr-web%2Fframework%2Fapp%3F%23/myWorkspace/"); // OMi
+            window.open("http://ctspigdcemmon06:51908/occ_console.aspx?ViewID=38429CBA-CBC7-F48B-36BA-DCD590E85C06&ViewType=AlertView&DisplayMode=Pivot"); // EES
+            window.open("http://10.10.18.84:51908/occ_console.aspx?ViewID=A1A6F549-A314-2D1D-AC4F-02996437C1F6&ViewType=AlertView&DisplayMode=Pivot"); // OAHPP
+            window.open("http://10.88.214.216:8081/ITO_OP/OML_ServerHealth.html"); // OML_ServerHealth
+            window.open("https://intra.vend.esmt.myit.its.gov.on.ca/arsys/shared/login.jsp?/arsys/home"); // eSMT
+            window.open("https://161.108.185.232/"); // Dynatrace
+        }
+
+        function openWorkSchedule(){
+            window.open("file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/OCC%20DOCs/scheduleView2018.xlsm");
+        }
+
+        function openOnCallList(){
+            window.open("http://intra.myit.its.gov.on.ca/ocl/");
+        }
+
+        function openWhiteBoard(){
+            window.open("file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/OCC/OCCWB/Personal/OCC%20eWhite%20Board.one");
+        }
+
+        function openEsmt(){
+            window.open("https://intra.vend.esmt.myit.its.gov.on.ca/arsys/shared/login.jsp?/arsys/home");
+        }
+
+        function openOccDocs(){
+            window.open("file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/OCC%20DOCs");
+        }
+
+        function openCrqReports(){
+            window.open("file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/OCC_Daily_Status");
+        }
+
+        function openPlanView(){
+            window.open("https://ontario.pvcloud.com/planview/login/body.asp");
+        }
+
+        function openPingTool(){
+            window.open("file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/EIT/OCC%20Nodes%20IP.xlsm");
+        }
+
+        function openSodo(){
+            window.open("http://intra.myit.its.gov.on.ca/sodo/default.aspx?redirect=false");
+        }
+    </script> 
+</head>
+<body>
+    <!-- fixed top NavBar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-between">
+        <span class="navbar-brand mb-0 h1">OCC</span>
+        <!-- nav buttons -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">About Us</a>
+              <a class="nav-item nav-link" href="#">Knowledge Base</a>
+              <a class="nav-item nav-link" href="#">Events</a>
+            </div>
+            <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:gray">
+                        More
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+              </div>
+          </div>
+          <!-- nav buttons end -->
+          <!-- nav search -->
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <!-- nav search end -->
+    </nav>
+    <!-- fixed top NavBar end -->
+    <!-- jumbotran -->
+	<div class="jumbotron jumbotron-fluid" style="background-color:rgb(10, 105, 10); height:200px">
+  	    <div class="container">
+            <h1 style="color:white; font-weight:bold" class="display-4">Operations Control Centre</h1>
+    	    <p class="lead" style="color:white">Infrustruture Technology Service</p>
+  	    </div>
+    </div>
+    <!-- jumbotran end -->
+
+    <div class="row">
+        <!-- sideNav-->
+        <div class="col-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-tools-tab" data-toggle="pill" href="#tools" role="tab" aria-controls="v-pills-tools" aria-selected="false">Tools</a>
+                <a class="nav-link" id="v-pills-phoneBook-tab" data-toggle="pill" href="#phoneBook" role="tab" aria-controls="v-pills-phoneBook" aria-selected="false">Phone Book</a>
+                <a class="nav-link" id="v-pills-resources-tab" data-toggle="pill" href="#resources" role="tab" aria-controls="v-pills-resources" aria-selected="false">Resources</a>
+                <a class="nav-link" id="v-pills-employeeSupport-tab" data-toggle="pill" href="#employeeSupport" role="tab" aria-controls="v-pills-employeeSupport" aria-selected="false">Employee Support</a>
+            </div>
+        <!-- sideNav end -->
+        </div>
+        <!-- main view -->
+        <div class="col-10">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <!-- home view -->
+                    <div class="row">
+                        <!-- main content view -->
+                        <div class="col-6">
+                            <p>content1</p>
+                            <div class="card-deck">
+                                <div class="card text-center bg-light mb-3" style="max-width: 46rem;">
+                                    <div class="card-header d-flex justify-content-between">
+                                        OCC Updates
+                                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#addUpdatesModal">Add</button>    
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-deck">
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">OCC  IJ Escort Tickets</h5>
+                                        <p class="card-text">
+                                            Kelly.A.Smith 705-494-3296Cell:705-840-0485Pager:1-888-359-6629 <br>Riaz.Vellani  416-326-6122 Cell: (647) 981-7542
+                                            <br>JC=>JC Operational Support=>JUS MSG ITD IJ OPERATIONS MGMT
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Out of Warranty Maintenance (OWM) List</h5>
+                                        <a href="file://cihs.ad.gov.on.ca/esc1/groups/155Data/Hosting%20%20Services/On-Call%20List/OWM-Lists/" class="btn btn-primary">open</a>
+                                        <p class="card-text">
+                                            (Open the latest folder and Spreadsheet and search CI Serial Number on the  Consolidated Vendor Data tab) Report issues to Nagalakshmi, Subramanya (TBS) copy to Jessa, Ali (TBS)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-deck">
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">P3/P4 Assign Procedure</h5>
+                                        <p class="card-text">
+                                            Please assign P3/P4 (Not Paged) for All DCO (except Mainframe & UNIX) queues to ITS=> DCO=> DCO DISPATCH   
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">MTO LCS Connections</h5>
+                                        <p class="card-text">
+                                            Run on D02AC:  MVS D TCPIP,TN3270E,CONN,PORT=992
+                                            <br>Run on NETV02:    MTO,1,G   &   MTO,1,M9
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-deck">
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">OCCGDC DR 2018</h5>
+                                        <p class="card-text">
+                                            Use 10.101.199.130 (SY07DR) 10.101.199.131 (SY06DR) 10.101.199.132 (SYFPDR) for DRS GoNet Session
+                                            <br>Contingency.Services@Ontario.ca (416) 918-9719
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center bg-dark mb-3" style="max-width: 22rem;">
+                                    <div class="card-header">OCC Notes</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text">
+                                            content...............................
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main content view end -->
+                        <!-- shortcut icons view -->
+                        <div class="col-3">
+                            <p>Documents</p>
+                            <button type="button" class="btn btn-warning btn-xl" id="shortCutButton" onclick="openOccDocs()">
+                                    <div>OCC</div><div>DOCs</div>
+                            </button>
+                            <button type="button" class="btn btn-xl" id="shortCutButton" onclick="openWhiteBoard()" style="color:white; background-color:blueviolet">
+                                    <div>OCC</div><div>eWhiteBoard</div>
+                            </button>
+                            <button type="button" class="btn btn-info btn-xl" id="shortCutButton" onclick="openWorkSchedule()">
+                                <div>Schedule</div>
+                            </button>
+                            <button type="button" class="btn btn-success btn-xl" id="shortCutButton" onclick="openOnCallList()">
+                                <div>On Call</div><div>List</div>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-xl" id="shortCutButton" onclick="openSodo()">
+                                    <div>S.ODO</div>
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <p>Apps</p>
+                            <button type="button" class="btn btn-xl" id="shortCutButton" onclick="startMonitorApps()" style="color:white; background-color:blueviolet">
+                                <div>Start</div><div>Monitor Apps</div>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-xl" id="shortCutButton" onclick="openEsmt()">
+                                <div>eSMT</div>
+                            </button>
+                            <button type="button" class="btn btn-info btn-xl" id="shortCutButton" onclick="openPlanView()">
+                                <div>PlanView</div>
+                            </button>
+                            <button type="button" class="btn btn-success btn-xl" id="shortCutButton" onclick="openCrqReports()">
+                                <div>CRQ</div><div>Reports</div>
+                            </button>
+                            <button type="button" class="btn btn-warning btn-xl" id="shortCutButton" onclick="openPingTool()">
+                                <div>Nodes</div><div>IP & Default</div><div>Gateway</div>
+                            </button>
+                        </div>
+                        <!-- shortcut icons view end -->
+                    </div>
+                    <!-- home view end -->
+                </div>
+                <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="v-pills-tools-tab">
+                    <!-- tools view -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-group">
+                                <div class="card" style="max-width: 75rem;">
+                                    <div class="card-header text-white text-center bg-dark">OCC</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">eSMT -- BMC Remedy Action Request System </h4>
+                                        <a href="http://Intra.esmt.myit.its.gov.on.ca" target="_blank" class="btn btn-sm btn-primary" role="button">Direct Login</a>&nbsp&nbsp
+                                        <a href="http://intra.vend.esmt.myit.its.gov.on.ca/" target="_blank" class="btn btn-sm btn-primary" role="button">Login by Credentials</a>
+                                        <h6 class="card-text">eSMT userID: like OLUNLOYOGE@CAC.AD.GOV.ON.CA (Case Sensitive)</h6><h6>eSMT password: same as your ontario.ca email password</h6>
+                                        <p class="card-text">Open eSMT in IE via RUN command:</p>
+                                        <p class="card-text text-secondary">RUNAS /username:cac\UserID "C:\Program Files\Internet Explorer\iexplore.exe"</p>
+                                        <p class="card-text">Open eSMT in Chrome via RUN command:</p>
+                                        <p class="card-text text-secondary"> RUNAS /username:cac\UserID "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"</p>
+                                        <p class="card-text text-danger">Note: please replace cac\UserID with your own ID</p>
+                                        <p class="card-text">eSMT Quick Links: 
+                                            <a href="https://intra.esmt.myit.its.gov.on.ca/arsys/forms/intra-app-esmt/HPD%3AHelp+Desk/Best+Practice+View/?cacheid=b9142b3c" target="_blank" class="text-info">eINC Search</a>&nbsp&nbsp&nbsp&nbsp
+                                            <a href="https://intra.esmt.myit.its.gov.on.ca/arsys/forms/intra-app-esmt/CHG%3AInfrastructure+Change/Best+Practice+View/?cacheid=55ff7df2" target="_blank" class="text-info">eCRQ Search</a>&nbsp&nbsp&nbsp&nbsp
+                                            <a href="https://intra.esmt.myit.its.gov.on.ca/arsys/forms/intra-app-esmt/CTM%3APeople/Default+User+View/?cacheid=73bcc83d" target="_blank" class="text-info">ePeople Search</a>
+                                        </p>
+                                        <p class="card-text">For more information about eSMT, please click:&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\cathy\Web\mm_eit.htm" target="_blank" class="btn btn-success btn-sm" role="button">eSMT User Guide</a>
+                                        </p>  
+                                    </div>
+                                </div>
+                                <div class="card" style="max-width: 75rem;">
+                                    <div class="card-header text-white text-center bg-dark">Tools</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">OVO -- HP OpenView</h4>
+                                        <h6 class="card-text">Login: use Manager Server 10.88.214.216</h6>
+                                        <p class="card-text">
+                                            <a href="http://10.88.214.216:8081/ITO_OP/OML_ServerHealth.html" target="_blank" class="btn btn-sm btn-warning" role="button">OML_ServerHealth</a>&nbsp&nbsp
+                                            <a href="http://ctspikdcemmon04.mgmt.cihs.gov.on.ca:3443/cgi-bin/OMU_ServerHealth" target="_blank" class="btn btn-sm btn-warning" role="button">OMU_HealthProd</a>
+                                        </p>
+                                        <p class="card-text">For more information about HP OpenView, please click:&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OpenView" target="_blank" class="btn btn-success btn-sm" role="button">HP OpenView User Guide</a>&nbsp&nbsp&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\cathy\Web\HPOpenview.htm" target="_blank" class="btn btn-success btn-sm" role="button">OMU User Guide</a>
+                                        </p>
+                                        <br>
+                                        <h4 class="card-title">SCOM Web Console</h4>
+                                        <p class="card-text">
+                                            <a href="http://ctspigdcemmon06:51908/occ_console.aspx?ViewID=38429CBA-CBC7-F48B-36BA-DCD590E85C06&ViewType=AlertView&DisplayMode=Pivot" target="_blank" class="btn btn-warning btn-sm" role="button">EES SCOM</a>
+                                            &nbsp&nbsp Use SOCMON credential to login
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="http://10.10.18.84:51908/occ_console.aspx?ViewID=A1A6F549-A314-2D1D-AC4F-02996437C1F6&ViewType=AlertView&DisplayMode=Pivot" target="_blank" class="btn btn-warning btn-sm" role="button">OAHPP SCOM</a>
+                                            &nbsp&nbsp Login ID: oahpp\occ.scom; Password: 0@hppSCOM
+                                        </p>
+                                        <p class="card-text">For more information about OAHPPSCOM, please click:&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OAHPP SCOM Web Console.mht" target="_blank" class="btn btn-success btn-sm" role="button">OAHPP User Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-group">
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">OMi -- OPERATIONS MANAGER i</h4>
+                                        <p class="card-text">
+                                            <a href="https://itsomi.tools.cihs.gov.on.ca/topaz/login.jsp?openInNewWindow=false&if_redirect=true&portlet_url=%2Fopr-web%2Fframework%2Fapp%3F%23/myWorkspace/" target="_blank" class="btn btn-primary btn-sm">Login&nbsp&nbsp<span class="badge badge-light">new</span></a> 
+                                            <a href="https://itsomi.tools.cihs.gov.on.ca/topaz/login.jsp" target="_blank" class="btn btn-primary btn-sm">Login Alternative</a>
+                                        </p>
+                                        <h6 class="card-text">OMi userID: LAN or CIHS IDs</h6><h6>eSMT password: same as your ontario.ca email password</h6>
+                                        <p class="card-text">For more information about eSMT, please click:&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OpenView\Working with OMi-Daniel's Guide.docx" target="_blank" class="btn btn-success btn-sm" role="button">OMi User Guide</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Mainframe</h4>
+                                        <h6 class="card-text">Use one of the flollowing ID to Login: MBOP06, MBOP07, MBOP08, MBOP09,  MBOP13, MBOP14, MBOP22, MBOP23  MBOLSP, SYIMIM, SYIMII</h6>
+                                        <p class="card-text">After login, type '<span class="text-danger">SDF</span>' at command line to show Focal point Monitoring view</p>
+                                        <p class="card-text">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 2 - Mainframe\TN3270E connection status on SY06.docx" target="_blank" class="text-info">check status of TN3270E/LCS connections for Service Ontario and MTO</a>
+                                        </p>
+                                        <p class="card-text">For more information about Mainframe, please click:&nbsp&nbsp
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 2 - Mainframe" target="_blank" class="btn btn-success btn-sm" role="button">Mainframe Manuals</a>
+                                        </p> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-group">
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">PlanView</h4>
+                                        <p class="card-text">
+                                            <a href="http://ontario.pvcloud.com/" target="_blank" class="btn btn-primary btn-sm" role="button">Login</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="http://intra.sm.its.gov.on.ca/TCOE_Videos/PlanView_Timesheet_Entry/EPCS/Training%20Video/Planview.html" target="_blank" class="text-info">PlanView Training Videos</a></p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-body">
+                                       <h4 class="card-title">Other Tools</h4>
+                                       <div class="row">
+                                           <div class="col">
+                                               <p class="card-text"><a href="http://intra.myit.its.gov.on.ca/IMaware" target="_blank" class="text-info">P1&P2 IMAware</a></p>
+                                               <p class="card-text"><a href="https://161.108.185.232/" target="_blank" class="text-success">Dynatrace</a></p>
+                                               
+                                               <p class="card-text"><a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/OCC/OCCWB/Personal/OCC%20eWhite%20Board.one" target="_blank" class="text-info">OCC eWhiteboard</a></p>
+                                           </div>
+                                           <div class="col">
+                                               <p class="card-text"><a href="http://intra.myit.its.gov.on.ca/ocl/" target="_blank" class="text-info">On Call List</a></p>
+                                               <p class="card-text"><a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/OCC_Daily_Status" target="_blank" class="text-success">Turnover & RFC MAP</a></p>
+                                               <p class="card-text"><a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/EIT/OCC%20Nodes%20IP.xlsm" target="_blank" class="text-info">Nodes IP & Default Gateway</a></p>
+                                           </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tools view end -->
+                <div class="tab-pane fade" id="phoneBook" role="tabpanel" aria-labelledby="v-pills-phoneBook-tab">
+                    <!-- phone book view--> 
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="nav-phone-tab" data-toggle="tab" href="#nav-phone" role="tab" aria-controls="nav-home" aria-selected="true">Phone</a>
+                          <a class="nav-item nav-link" id="nav-vendor-phone-tab" data-toggle="tab" href="#nav-vendor-phone" role="tab" aria-controls="nav-vendor-phone" aria-selected="false">Vendor Phone</a>
+                          <a class="nav-item nav-link" id="nav-other-phone-tab" data-toggle="tab" href="#nav-other-phone" role="tab" aria-controls="nav-other-phone" aria-selected="false">Other</a>
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-phone" role="tabpanel" aria-labelledby="nav-phone-tab">
+                            <table class="table table-striped table-hover">
+                                <tbody>
+                                   <!-- OCC Home Phone Number -->    
+                                    <tr>
+                                        <th rowspan="4">OCC Home</th><td rowspan="2">Teleconference#</td><td>416-212-8010 / 1-866-602-5423</td><td>User Pass:8987998#; Chair Pass:9864#</td>
+                                    </tr>
+                                    <tr>
+                                        <td>416-212-8011 / 1-866-602-5461</td><td>User Pass:1374873#; Chair Pass:8865#</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mitch</td><td>416-212-8011 / 1-866-602-5461</td><td>User Pass:1374873#; Chair Pass:8865#</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Use the follwing Toll Free numbers instead of 416 Numbers: <br>416-212-8010/866-602-5423; 416 212-8011/866-602-5461; 416-212-8012/866-633-0848; 416 212-8013/866-633-1033; 416 212-8014/866-500-5845</td>
+                                    </tr>
+                                    <!-- OOC Home Phone Number end -->
+                                    <!-- Managers/SMEs Phone Number -->
+                                    <tr>
+                                        <th rowspan="19">Managers/SMEs</th><td>Ryan Lucas</td><td colspan="2">Mobile: 416-770-3159</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charlie Ancheta</td><td colspan="2">519-837-6227; Mobile: 416-414-6225</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gordon Budd</td><td colspan="2">519-837-6144; Mobile: 416-262-5880; Residential: 519-927-7787</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chris</td><td colspan="2">Residential: 905-274-3862<td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Andrus</td><td colspan="2">519-837-6146 Mobile: 416-436-4101</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sam Garritano</td><td colspan="2">Mobile: 416-845-6406</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Richard</td><td colspan="2">Mobile: 416-276-6592</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cameron</td><td colspan="2">Mobile: 416 452-4497</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manjeet</td><td colspan="2">Mobile: 647-982-4898; Residential: 416-740-0061</td>
+                                    </tr>        
+                                    <tr>
+                                        <td>Mohammed Haider</td><td colspan="2">519-837-6151; Mobile: 519-546-4896</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul James></td><td colspan="2">519-837-6733; Mobile: 416-568-9439</td>
+                                    </tr>
+                                    <tr>
+                                        <td>George Olunloyo</td><td colspan="2">519-837-6172; Mobile: 519-830-9297</td>
+                                    </tr>
+                                    <tr>
+                                        <td>William Chun</td><td colspan="2">Mobile: 416-300-3189</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Felice Conenna</td><td colspan="2">Mobile: 519-830-0583</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ron Lepine</td><td colspan="2">Mobile: 416-527-2545</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jay Penny</td><td colspan="2">519-837-6178; Mobile: 519-994-4391</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saqib Bukhari</td><td colspan="2">Mobile: 647-998-3257</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Allan Samuel</td><td colspan="2">Mobile: 416-662-5285</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rick Detenbeck</td><td colspan="2">519-837-6734; Mobile:226-971-2440</td>
+                                    </tr>
+                                    <!-- Managers/SMEs Phone Number end -->
+                                    <!-- Office Phone Number -->
+                                    <tr>
+                                        <th rowspan="17">Office</th><td>Reception TDC</td><td colspan="2">5-1899</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">GDC</td><td>OCC Phone: 519-837-6222/226-820-4496 BB</td><td>Email: OCCGDC@ontario.ca</td> 
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Print Room: InfoPrint Server: AIX098 ctspitdcemadm07</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Tape/Print Operations GDC: 519-837-6800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>New in GDC ctspigdcemadm08</td><td>Library Jerry CTSPIGDCEMTAP02</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Production Control: 416-326-9949/BB 416-402-5735/519-837-6295</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">KDC</td><td>Phone: 613-548-6230/613 484 5314 BB</td><td>Email: sorckingston@ontario.ca</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Security: 613-548-6238</td><td>Print/Tape:613-548-6228</td> 
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">ORDC</td><td colspan="2">Phone: 905-440-2479 / 905-435-3547 / 905-433-5857(NA) /905-433-6497 (MGR)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ORDC Mobile: 905-261-1337</td><td>Emergency Contact: Ken Sampson 647-215-0668</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">ORDC Email: Oshawa.Operations@ontario.ca</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Print Room: 905-436-4334</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="5">PRDC</td><td colspan="2">Security: 705–742-9900</td> 
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Martha-Cecilia: 5-8038</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Svetlana Dudin: 416-212-8791</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Vacant: 6-9298</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Carm Tassone: 519-837-6122; Mobile: 519-830-0293</td>
+                                    </tr>
+                                    <!-- Office Phone Number end -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- vendor phone number content -->
+                        <div class="tab-pane fade" id="nav-vendor-phone" role="tabpanel" aria-labelledby="nav-vendor-phone-tab">
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Brocade: 1-800-752-8061  Duty Manager available 24/7</th>
+                                   </tr>
+                               </thead>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th><a href=" http://www.centricsit.com/" target="_blank">Centrics Support Services</a>: 905-761-6222</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>346 Millway Avenue, Unit 1, Vaughan, ON, Canada, L4K 3W1, case@centricsit.com</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Doug Dice D: 905.761.6222  #1804  M: 416.457.0564 E: ddice@centricssupport.com</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>CompuCom: Toll Free 1-800-330-9426 / 1-289-261-3380</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Follow established escalation per OCC on-call sheet from the following link:</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Robin.Fernandez@compucom.com    Office:416-754-6307      Mobile:416-564-1147</td>
+                                   </tr>
+                                   <tr>
+                                       <td>camilo.leite@compucom.com            Office:416-298-5212      Mobile:416-827-6557</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Sumeet.Midha@compucom.com        Office:289-261-3206      Mobile:647- 456-7399</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Fawaz.Rustomji@Compucom.com    Office:416-329-5934      Mobile:647-866-1629</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Compugen: 416-357-9122, After hours: 1 800-353-2933. Bridge incident to the Compugen group using assigned COMPUGEN X86 path</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Escalation: Antonella Patti APatti@compugen.com (905.695.4095) OR  Andrea Shaw AShaw@compugen.com (905.695.8240)</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Patrick Decoito   Client Relations Specialist (Get incidents status) Direct: 905.695.8274 | Toll Free: 1.888.827.2244</td>
+                                   </tr>
+                                   <tr>
+                                       <td>John Aguiar  Client Relations Specialist (Get incidents status)  Direct: 905-695-6923    Toll Free: 1.888.827.2244</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Dell:  1-800-822-8965 - Ask for “Technical Support for Server”,  Duty Manager available 24/7</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Press <a href="http://www.dell.com/support/home/ca/en/cabsdt1" role="button" class="btn btn-primary" target="_blank">search</a> to search Dell Server with Serial Number</td>
+                                   </tr>
+                                   <tr>
+                                       <td>David Lee Technical Account Manager, Office 416-758-2207 or 800.387.5757 x 7582207, Mobile  647-210-3554; dave_f_lee@dell.com</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>EMC:  1-800-543-4782 --Our Cust# 12936566</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>If there is dispute, ask for EMC 'on-call duty manager' (always Canadian Manager)</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>HDS:  1-800-446-0744  (Site ID: 386267I(Guelph) or 386459I(Kingston))  <a href="https://tuf.hds.com/upload.php" class="btn btn-primary" role="button" target="_blank">Upload Logs</a></th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>In case of a dispute, Oliver Gnass (District manager) Cell: 289-981-1080</td>
+                                   </tr>
+                                   <tr>
+                                       <td>OCC GDC Tech. david.mead@hds.com 416 559 9660 Cell/416 358 7277 B.B.</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Sergio Siliceo sergio.siliceo@hitachivantara.com Hitachi Vantara Service Provider</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>HP:</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <th>Warranty</th><td>Call Compugen:  1-800-353-2933.  Do not call HP direct (though HP can be reached for exceptional circumstances at 1-800-633-3600; contract #1032 7256 6002)</td>
+                                   </tr>
+                                   <tr>
+                                       <th>Off-Warranty</th><td>IBM has the service contract with MGS for off-warranty HP equipment, call IBM:  1-800-426-7378</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>IBM: 1-800-426-7378 (IBM-SERV).   Our Cust # 0919433 (GDC), 0724802 (KDC) or (Mainframe) 0921774</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>
+                                           <a href="https://www-947.ibm.com/support/servicerequest/HwHome.action" class="btn btn-primary" role="button" target="_blank">Open IBM Service Request</a>
+                                           <span>  Upload DSA logs for IBM X-series or Lenovo systems:  </span><a href="https://logupload.lenovo.com/logupload.html" class="btn btn-success" role="button" target="_blank">Click Here</a>
+                                           <span>  Upload DSA logs for NON-X series or Lenovo systems:  </span><a href="http://www.ecurep.ibm.com/app/upload" class="btn btn-success" role=button target="_blank">Click Here</a>
+                                   </tr>
+                                   <tr>
+                                       <td>Escalation Level 1       Robb Coutie    coutie@ca.ibm.com     416-478-3370</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Escalation Level 2       Hasan Warmuz hasans@ca.ibm.com    905-316-0571</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Escalation Level 3       Jamie Howe     jchowe@ca.ibm.com   905-316-1715</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Brent Southall Cell: 905-516-5801 Email: brentso@ca.ibm.com</td>
+                                   </tr>
+                                   <tr>
+                                       <td>If there is dispute, ask for IBM 'duty field manager'</td>
+                                   </tr>
+                                   <tr>
+                                       <td>MANAGEMENT BOARD SECRETARIAT -- IBM customer number: 0724842 / 0724802</td>
+                                   </tr>
+                                   <tr>
+                                       <td>MINISTRY OF GOVERNMENT -- IBM customer number: 0724802 / 0921774</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Ministry of Government Services -- IBM customer number: 0033639 / 0066716 / 0921774</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Ministry of Finance -- IBM customer number: 0135821</td>
+                                   </tr>
+                                   <tr>
+                                       <td>GONT FINANCE/OSHAWA -- IBM customer number: 0135821</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>ORACLE/SUN: 1-800-223-1711</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Only if necessary, call Wayne Romfph, (Oracle Technical Support Manager) 519-859-8535</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Park Place Technologies: 1-800-343-4654 Open Ticket with IBM and IBM will open ticket with Park Place.</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Operations Manager: Jamshaid Sheikh jsheikh@parkplacetech.ca 905-370-6110/416-561-0018</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Upload logs to Park Place:<span>    <a href="https://files.parkplacetech.com/filedrop/RES" class="btn btn-primary" role="button" target="_blank">Upload</a></span></td>
+                                   </tr>
+                               </tbody>
+                           </table> 
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th><a href="http://www.plasmon.com/" target="_blank">Plasmon</a>: 1-877-585-6793 (after hours: 1-719-593-4269) tech.support@plasmon.com.  contract# 40568*1</th>
+                                   </tr>
+                               </thead>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Quantum:  1-800-284-5101.   Escalation to Manager. Available 24/7.</th>
+                                   </tr>
+                               </thead>
+                           </table>
+                           <br>
+                           <table class="table table-boardered table-striped table-hover">
+                               <thead>
+                                   <tr>
+                                       <th>Ricoh:  1-877-318-8967.  Escalation to Daryl Ready, Branch Service Manager.</th>
+                                   </tr>
+                               </thead>
+                           </table>                             
+                        </div>
+                        <!-- vendor phone number content end -->
+                        <div class="tab-pane fade" id="nav-other-phone" role="tabpanel" aria-labelledby="nav-other-phone-tab">Example: (519)333-3333</div>
+                      </div>
+                </div>
+                <!-- phone book view end -->
+                <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="v-pills-resources-tab">
+                <!-- resources view -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header text-white bg-dark">
+                                    <h3 class="d-flex justify-content-between">
+                                        <div>OCC DOCs</div>
+                                        <div>
+                                            <a href="http://intra.doc.its.gov.on.ca/ta/OCCDOC/Forms/AllItems.aspx?RootFolder=%2Fta%2FOCCDOC%2FOCC&FolderCTID=0x0120006FC313D9E9CFA247BF4DE25D4BC87D2C&View=%7b637B45C6-4C45-4D57-A72A-4ECE9C43CCC7%7d" target="_blank" class="btn btn-sm btn-primary" role="button">SharePoint</a>
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs" target="_blank" class="btn btn-sm btn-primary" role="button">Open Folder</a>
+                                        </div>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="accordion" id="accordionDocs">
+                                <h4 id="headingCh1">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh1" aria-expanded="true" aria-controls="collapseCh1">
+                                        Chapter 1 - Monitoring Tools
+                                    </button>
+                                </h4>
+                                <div id="collapseCh1" class="collapse show" aria-labelledby="headingCh1" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\SORC OVOU Operations guide Ver09.doc" target="_blank" class="text-dark">OCC – OML Operations Guide</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OpenView\OCC OMi Operations guide.docx" target="_blank" class="text-dark">OCC – OMi Operations Guide</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OpenView\Procedure for Hardware_monitoring_OCC_v1.4.docx" target="_blank" class="text-dark">OCC – Hardware Monitoring Procedure</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 1 - Monitoring Tools\OpenView\EO URL Monitoring 18.doc" target="_blank" class="text-dark">Election Ontario URL Monitoring 2018</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h4 id="headingCh2">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh2" aria-expanded="false" aria-controls="collapseCh2">
+                                        Chapter 2 - Mainframe
+                                    </button>
+                                </h4>
+                                <div id="collapseCh2" class="collapse show" aria-labelledby="headingCh2" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="\\cihs.ad.gov.on.ca\esc1\Groups\1201PUBLIC\OCC DOCs\Chapter 2 - Mainframe\ZOS\Mainframe Course" target="_blank" class="text-dark">Mainframe Course</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh3">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh3" aria-expanded="false" aria-controls="collapseCh3">
+                                        Chapter 3 - Mid-Range & AS400
+                                    </button>
+                                </h4>
+                                <div id="collapseCh3" class="collapse show" aria-labelledby="headingCh3" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh4">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh4" aria-expanded="false" aria-controls="collapseCh4">
+                                        Chapter 4 - ITSM and eSMT
+                                    </button>
+                                </h4>
+                                <div id="collapseCh4" class="collapse show" aria-labelledby="headingCh4" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh5">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh5" aria-expanded="false" aria-controls="collapseCh5">
+                                        Chapter 5 - Network
+                                    </button>
+                                </h4>
+                                <div id="collapseCh5" class="collapse show" aria-labelledby="headingCh5" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh6">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh6" aria-expanded="false" aria-controls="collapseCh6">
+                                        Chapter 6 - OCC Clients and Vendors
+                                    </button>
+                                </h4>
+                                <div id="collapseCh6" class="collapse show" aria-labelledby="headingCh6" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh7">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh7" aria-expanded="false" aria-controls="collapseCh7">
+                                        Chapter 7 - DR
+                                    </button>
+                                </h4>
+                                <div id="collapseCh7" class="collapse show" aria-labelledby="headingCh7" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh8">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh8" aria-expanded="false" aria-controls="collapseCh8">
+                                        Chapter 8 - Facilities
+                                    </button>
+                                </h4>
+                                <div id="collapseCh8" class="collapse show" aria-labelledby="headingCh8" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh9">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh9" aria-expanded="false" aria-controls="collapseCh9">
+                                        Chapter 9 - Print and Tape
+                                    </button>
+                                </h4>
+                                <div id="collapseCh9" class="collapse show" aria-labelledby="headingCh9" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+
+                                <h4 id="headingCh10">
+                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCh10" aria-expanded="false" aria-controls="collapseCh10">
+                                        Chapter 10 - Hardware
+                                    </button>
+                                </h4>
+                                <div id="collapseCh10" class="collapse show" aria-labelledby="headingCh10" data-parent="#accordionDocs">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="" target="_blank" class="text-dark">Under development</a>
+                                        </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- resources view end -->
+                <div class="tab-pane fade" id="employeeSupport" role="tabpanel" aria-labelledby="v-pills-employeeSupport-tab">
+                <!-- employeeSupport view -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-group">
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-header text-white bg-dark">
+                                        <h4 class="card-text">
+                                            <a href="http://intra.ops.myops.gov.on.ca/" target="_blank" class="text-white">myOPS</a>
+                                        </h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <a href="http://intra.servicedesk.its.gov.on.ca/" target="_blank" class="btn btn-outline-success" role="button">my Service Desk</a>
+                                            <a href="http://intra.myit.its.gov.on.ca/sodo/" target="_blank" class="btn btn-outline-info" role="button">my SODO</a>
+                                        
+                                        
+                                            <a href="http://intra.servicedesk.its.gov.on.ca/AccountPro#qa_vid" target="_blank" class="btn btn-outline-success" role="button">reset PC Password</a>
+                                            <a href="http://intra.net.gov.on.ca/its/" target="_blank" class="btn btn-outline-info" role="button">ITS Portal</a>
+                                    
+                                        
+                                            <a href="http://intra.myit.its.gov.on.ca/SSMC/Explorer" target="_blank" class="btn btn-outline-success" role="button">OPS Knowledge Base</a>
+                                            <a href="https://intra.careers.gov.on.ca/Employees/Jobs.aspx" target="_blank" class="btn btn-outline-info" role="button">OPS Career(Internal)</a> 
+                                        </div>
+                                        <div class="card-title text-secondary mt-3">
+                                            <h3>OPS Documents</h3>
+                                        </div>
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/OCC%20DOCs/Chapter%206%20-%20OCC%20Clients%20and%20Vendors/2017-18-Operational-Plan_April-2017.pptx" target="_blank" class="text-primary">ITS 2017-18 Operation Plan</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="https://intra.ontario.ca/iit/its-year-in-review-2017-18" target="_blank" class="text-primary">ITS Year in Review 2017-18</a>
+                                        </p>   
+                                    </div>
+                                </div>
+                                <div class="card" style="width:75rem;">
+                                    <div class="card-header text-white bg-dark">
+                                        <h4 class="card-text">WIN</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/WIN%20CALCULATOR.htm" target="_blank" class="text-primary">WIN Caluator</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/WIN/Using%20WIN%20Time%20&%20Labour%20Self%20Service.mht" target="_blank" class="text-primary">WIN Time Self Service</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/WIN/WIN-Samples.htm" target="_blank" class="text-primary">WIN Samples</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/WIN/MYFORMS.htm" target="_blank" class="text-primary">my Forms</a>
+                                        </p>
+                                        <p class="card-text">
+                                            <a href="file://cihs.ad.gov.on.ca/esc1/Groups/1201PUBLIC/cathy/Web/WIN/OPSEU%20CA%202015-2017.pdf" target="_blank" class="text-primary">OPSEU CBA</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- employeeSupport view end -->
+            </div>
+        </div>
+        <!-- main view end -->
+    </div>
+
+    <!-- modal views -->
+    <div class="modal fade" id="addUpdatesModal" tabindex="-1" role="dialog" aria-labelledby="addUpdatesModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <form action="" method="GET">
+                        <textarea name="message" style="width:29rem; height:10rem">Please enter your updates here</textarea>
+                       <br>
+                        <div class="d-flex justify-content-end">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&nbsp&nbsp
+                           <input type="submit" value="Save" class="btn btn-success"/>
+                        </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal views end -->
+</body>
+</html>
